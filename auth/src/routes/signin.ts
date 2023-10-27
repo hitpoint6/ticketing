@@ -24,7 +24,6 @@ router.post(
     if (!existingUser) {
       throw new BadRequestError("Invalid credentials.");
     }
-    console.log(password);
 
     const passwordMatched = await Password.compare(
       existingUser.password,
@@ -46,9 +45,8 @@ router.post(
 
     // Store it in session object
     req.session = { jwt: userJwt };
-    console.log("User signed in.");
 
-    res.status(201).send(existingUser);
+    res.status(200).send(existingUser);
   }
 );
 
