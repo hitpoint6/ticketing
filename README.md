@@ -2,7 +2,26 @@
 
 Built with microservices architecture
 
-### Architecture
+### Stack
+
+- Language and framework: Nodejs, Typescript, Express, Nextjs, Reactjs, MongoDB
+- Test: jest, supertest
+- Cluster: Docker, Dockerhub, Skaffold, ingress-nginx
+- Kubernetes
+  - Deployment (Pod)
+  - Service (ClusterIP Service, Nodeport Service)
+  - Ingress Nginx (Define routing rules inside the cluster)
+- Google Cloud: Kubernetes Engine, Cloud Build, Load Balancer, gcloud cli,
+
+### Services
+
+- Authentication:
+  - jsonwebtoken, cookie-session
+  - Hashing: randomBytes, scrypt
+- Client
+- Ticket
+- Order
+- Expiration
 
 ### Build a kubernetes environment on the cloud
 
