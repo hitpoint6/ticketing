@@ -6,7 +6,9 @@ Built with microservices architecture
 
 - Language and framework: Nodejs, Typescript, Express, Nextjs, Reactjs, MongoDB
 - Test: jest, supertest
-- Cluster: Docker, Dockerhub, Skaffold, ingress-nginx
+- Build share npmjs
+- Cluster:
+- Docker, Dockerhub, Skaffold, ingress-nginx
 - Kubernetes
   - Deployment (Pod)
   - Service (ClusterIP Service, Nodeport Service)
