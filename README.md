@@ -6,7 +6,7 @@ Services are built with minimum pakages to understand deeply how each component 
 
 ### Overview
 
-Nodejs, Typescript, Express, Nextjs, Reactjs, MongoDB, Docker, Kubernetes, Google Cloud
+Nodejs, Typescript, Express, Nextjs, Reactjs, MongoDB, NATS streaming server, Docker, Kubernetes, Google Cloud,
 
 ### Stack
 
@@ -37,4 +37,4 @@ Nodejs, Typescript, Express, Nextjs, Reactjs, MongoDB, Docker, Kubernetes, Googl
   - Storage: MongoDB
 - Order
 - Expiration
-- Event bus
+- Event bus: NATS streaming server
