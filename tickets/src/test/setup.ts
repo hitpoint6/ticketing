@@ -7,7 +7,11 @@ let mongo: any;
 declare global {
   var signin: () => Promise<string[]>;
 }
+
+jest.mock("../nats-wrapper");
+
 beforeAll(async () => {
+  jest.clearAllMocks();
   process.env.JWT_KEY = "asdfgaf";
   mongo = await MongoMemoryServer.create();
   const mongoUri = mongo.getUri();

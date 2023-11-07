@@ -7,6 +7,8 @@ import {
   requireAuth,
   validateRequest,
 } from "@ticketsphere/common";
+import { TicketUpdatedPublisher } from "../events/publisers/ticket-updated-publiser";
+import { natsWrapper } from "../nats-wrapper";
 
 const router = express.Router();
 
@@ -37,6 +39,13 @@ router.put(
       price: req.body.price,
     });
     await ticket.save();
+
+    new TicketUpdatedPublisher(natsWrapper.client).publish({
+      id: ticket.id,
+      title: ticket.title,
+      price: ticket.price,
+      userId: ticket.userId,
+    });
 
     res.send(ticket);
   }
