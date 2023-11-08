@@ -1,8 +1,8 @@
-import { model, Schema } from "mongoose";
+import { model, Schema, Document } from "mongoose";
 import { ITicket } from "./ticket";
 import { OrderStatus } from "@ticketsphere/common";
 
-export interface IOrder {
+export interface IOrder extends Document {
   userId: string;
   status: OrderStatus;
   expiresAt: Date;

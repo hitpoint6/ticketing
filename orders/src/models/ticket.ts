@@ -1,6 +1,7 @@
-import { model, Schema } from "mongoose";
+import { model, Schema, Document } from "mongoose";
 import { Order, OrderStatus } from "./order";
-export interface ITicket {
+
+export interface ITicket extends Document {
   title: string;
   price: number;
   userId: string;
