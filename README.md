@@ -10,8 +10,10 @@ Nodejs, Typescript, Express, Nextjs, Reactjs, MongoDB, NATS streaming server, Do
 
 ### Stack
 
-- Unit tests: jest, supertest
-- Code sharing between services: npm module
+- Unit tests:
+  - jest: Javascript testing framework
+  - supertest: for testing apis
+- Common Code shared between services: npm module
 - Cluster Management:
   - Dev tool: skaffold
   - Docker and Kubernetes
@@ -37,4 +39,6 @@ Nodejs, Typescript, Express, Nextjs, Reactjs, MongoDB, NATS streaming server, Do
   - Storage: MongoDB
 - Order
 - Expiration
+  - bull, job processing manager
+  - redis,
 - Event bus: NATS streaming server

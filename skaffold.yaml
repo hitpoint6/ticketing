@@ -39,6 +39,15 @@ build:
             dest: .
       docker:
         dockerfile: Dockerfile
+
+    - image: us.gcr.io/ticketing-dev-402503/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
 manifests:
   rawYaml:
     - ./infra/k8s/*
