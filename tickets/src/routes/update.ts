@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import { body } from "express-validator";
 import { Ticket } from "../models/ticket";
 import {
+  BadRequestError,
   NotAuthorizeError,
   NotFoundError,
   requireAuth,
@@ -27,6 +28,10 @@ router.put(
     const ticket = await Ticket.findById(id);
     if (!ticket) {
       throw new NotFoundError();
+    }
+
+    if (ticket.orderId) {
+      throw new BadRequestError("Can not edit a reserved ticket.");
     }
 
     const user = req.currentUser;
