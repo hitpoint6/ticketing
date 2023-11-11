@@ -48,6 +48,15 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
+
+    - image: us.gcr.io/ticketing-dev-402503/payments
+      context: payments
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
+      docker:
+        dockerfile: Dockerfile
 manifests:
   rawYaml:
     - ./infra/k8s/*
