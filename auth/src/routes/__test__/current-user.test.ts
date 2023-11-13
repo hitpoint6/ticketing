@@ -8,7 +8,7 @@ it("return a 201 on successful signup", async () => {
     .get("/api/users/currentuser")
     .set("Cookie", cookie)
     .send()
-    .expect(400);
+    .expect(200);
 
   expect(response.body.currentUser.email).toEqual("test@test.com");
 });
