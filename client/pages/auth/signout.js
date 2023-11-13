@@ -7,7 +7,7 @@ const Signout = () => {
     const { doRequest } = useRequest({
         url: "/api/users/signout",
         method: "post",
-        onSucess: () => Router.push('/')
+        onSuccess: () => Router.push('/')
     })
 
     useEffect(() => {

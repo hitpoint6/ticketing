@@ -11,7 +11,7 @@ const SignUp = () => {
         body: {
             email, password
         },
-        onSucess: () => {
+        onSuccess: () => {
             Router.push('/');
         }
     })
