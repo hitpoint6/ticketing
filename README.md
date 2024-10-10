@@ -1,8 +1,6 @@
 # Ticket Sphere
 
 Production-grade sell and buy ticketing app built with microservices.
-Services are built with minimum pakages to understand deeply how each component works.
-(Work in progress...)
 
 ### Overview
 
